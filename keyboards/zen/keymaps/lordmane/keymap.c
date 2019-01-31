@@ -41,7 +41,7 @@ enum keycodes {
 #define AGT(X) RALT_T(X)
 
 // Modifiers
-#define LT_SPC LT(_LOWEB, KC_SPC)
+#define LT_SPC LT(_LOWER, KC_SPC)
 #define LT_TAB LT(_LOWER, KC_TAB)
 #define LT_CAPS LT(_LOWER, KC_CAPSLOCK )
 #define LS_DEL LSFT_T(KC_DEL)
