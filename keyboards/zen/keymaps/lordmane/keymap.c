@@ -50,7 +50,7 @@ enum keycodes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
-   [_MODDH] = LAYOUT( \
+  [_MODDH] = LAYOUT( \
     KC_ESC,  KC_1,      KC_2,    KC_3,   KC_4,   KC_5,                       KC_6,        KC_7,    KC_8,    KC_9,   KC_0,      KC_BSPC, \
     KC_LBRC, KC_Q,      KC_W,    KC_F,   KC_P,   AGT(KC_B),                  AGT(KC_J),   KC_L,    KC_U,    KC_Y,   KC_SCLN,   KC_RBRC, \
     KC_GRV,  LST(KC_A), KC_R,    KC_S,   KC_T,   KC_G,                       KC_M,        KC_N,    KC_E,    KC_I,   RST(KC_O), KC_QUOT, \
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_MOD, KC_TAB,  KC_WH_L, KC_WH_D, KC_WH_R, KC_GRV,                   KC_QUOT, KC_LEFT, KC_DOWN, KC_RIGHT,KC_PGDN, KC_SLCK, \
     RGB_TOG, KC_LCTL, KC_LSFT, KC_LGUI, KC_BTN1, KC_MINS,                  KC_EQL,  KC_BTN1, KC_MS_UP,KC_BTN2, KC_INS   KC_BRK,  \
     RESET,   MODDH,   QWERTY,  M_VER,   KC_CAPS, KC_TAB, KC_DEL,  KC_BSPC, KC_SPC,  KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN3, KC_BSLS  \
-  ),
+  )
 
 };
 
