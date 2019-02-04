@@ -14,6 +14,7 @@ enum layers {
   _MODDH,
   _QWERTY,
   _LOWER,
+  _NUMLOCK,
 };
 
 enum keycodes {
@@ -41,11 +42,13 @@ enum keycodes {
 #define AGT(X) RALT_T(X)
 
 // Modifiers
-#define LT_SPC LT(_LOWER, KC_SPC)
-#define LT_DEL LT(_LOWER, KC_DEL)
+#define LT_SPC  LT(_LOWER, KC_SPC)
+#define LT_DEL  LT(_LOWER, KC_DEL)
 #define LT_BSPC LT(_LOWER, KC_BSPC)
 #define LT_CAPS LT(_LOWER, KC_CAPSLOCK )
-#define LS_DEL LSFT_T(KC_DEL)
+#define NT_ESC  LT(_NUMLOCK, KC_ESC )
+
+#define LS_DEL  LSFT_T(KC_DEL)
 #define LC_CAPS LCTL_T(KC_CAPS)
 #define RC_BSLS RCTL_T(KC_BSLS)
 
@@ -74,7 +77,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     RGB_MOD, KC_TAB,  KC_WH_L, KC_WH_D, KC_WH_R, KC_GRV,                   KC_QUOT, KC_LEFT, KC_DOWN, KC_RIGHT,KC_PGDN, KC_SLCK, \
     RGB_TOG, KC_LCTL, KC_LSFT, KC_LGUI, KC_BTN1, KC_MINS,                  KC_EQL,  KC_BTN1, KC_MS_UP,KC_BTN2, KC_INS,  KC_BRK,  \
     RESET,   MODDH,   QWERTY,  M_VER,   KC_CAPS, KC_TAB, KC_DEL,  KC_BSPC, KC_SPC,  KC_MS_L, KC_MS_D, KC_MS_R, KC_BTN3, KC_BSLS  \
-  )
+  ),
+
+  [_NUMLOCK] = LAYOUT( \
+    _______, _______,   _______, _______, _______, _______,                     _______,  _______,  KC_PSLS,  KC_PAST,  _______,      _______, \
+    _______, _______,   _______, _______, _______, _______,                     _______,  KC_P7,    KC_P8,    KC_P9,    KC_PMNS,      _______, \
+    _______, _______,   _______, _______, _______, _______,                     _______,  KC_P4,    KC_P5,    KC_P6,    KC_PPLUS,     _______, \
+    _______, _______,   _______, _______, _______, _______,                     _______,  KC_P1,    KC_P2,    KC_P3,    _______,      _______, \
+    _______, _______,   _______, _______, _______, _______,   _______, _______, _______,  KC_PENT,  KC_P0,    KC_PDOT,  _______,      _______  \
+  ),
 
 };
 
