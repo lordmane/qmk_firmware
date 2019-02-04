@@ -42,20 +42,22 @@ enum keycodes {
 
 // Modifiers
 #define LT_SPC LT(_LOWER, KC_SPC)
-#define LT_TAB LT(_LOWER, KC_TAB)
+#define LT_DEL LT(_LOWER, KC_DEL)
+#define LT_BSPC LT(_LOWER, KC_BSPC)
 #define LT_CAPS LT(_LOWER, KC_CAPSLOCK )
 #define LS_DEL LSFT_T(KC_DEL)
 #define LC_CAPS LCTL_T(KC_CAPS)
+#define RC_BSLS RCTL_T(KC_BSLS)
 
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_MODDH] = LAYOUT( \
-    KC_ESC,  KC_1,      KC_2,    KC_3,   KC_4,   KC_5,                       KC_6,        KC_7,    KC_8,    KC_9,   KC_0,      KC_BSPC, \
-    KC_LBRC, KC_Q,      KC_W,    KC_F,   KC_P,   AGT(KC_B),                  AGT(KC_J),   KC_L,    KC_U,    KC_Y,   KC_SCLN,   KC_RBRC, \
-    KC_GRV,  LST(KC_A), KC_R,    KC_S,   KC_T,   KC_G,                       KC_M,        KC_N,    KC_E,    KC_I,   RST(KC_O), KC_QUOT, \
-    KC_MINS, KC_Z,      KC_X,    KC_C,   KC_D,   KC_V,                       KC_K,        KC_H,    KC_COMM, KC_DOT, KC_SLSH,   KC_EQL,  \
-    LC_CAPS, KC_LGUI,   KC_LALT, KC_INS, KC_ESC, LT_TAB,LST(KC_DEL),  M_BSPC,LT_SPC,      KC_ENT,  KC_RALT, KC_RGUI,KC_RCTL,   KC_BSLS  \
+    KC_ESC,  KC_1,      KC_2,    KC_3,   KC_4,   KC_5,                       KC_6,        KC_7,    KC_8,    KC_9,    KC_0,      KC_BSPC, \
+    KC_LBRC, KC_Q,      KC_W,    KC_F,   KC_P,   AGT(KC_B),                  AGT(KC_J),   KC_L,    KC_U,    KC_Y,    KC_SCLN,   KC_RBRC, \
+    KC_GRV,  LST(KC_A), KC_R,    KC_S,   KC_T,   KC_G,                       KC_M,        KC_N,    KC_E,    KC_I,    RST(KC_O), KC_QUOT, \
+    KC_MINS, KC_Z,      KC_X,    KC_C,   KC_D,   KC_V,                       KC_K,        KC_H,    KC_COMM, KC_DOT,  KC_SLSH,   KC_EQL,  \
+    LC_CAPS, KC_LGUI,   KC_LALT, KC_INS, KC_ESC, LST(KC_TAB),LT_DEL, LT_BSPC,RST(KC_SPC), KC_ENT,  KC_RGUI, KC_RALT, KC_RGUI,   RC_BSLS  \
   ),
 
   [_QWERTY] = LAYOUT( \
